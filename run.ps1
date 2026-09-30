@@ -6,8 +6,8 @@ Write-Host "========================================" -ForegroundColor Cyan
 
 # Start Backend in background job
 $BackendJob = Start-Job -ScriptBlock {
-    Set-Location -Path $using:PWD
-    python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
+    Set-Location -Path "$using:PWD\backend"
+    python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 }
 
 Write-Host "Backend started at http://127.0.0.1:8000" -ForegroundColor Green
