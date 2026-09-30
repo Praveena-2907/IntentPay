@@ -23,6 +23,10 @@
     font-family: 'JetBrains Mono', monospace;
     font-variant-numeric: tabular-nums;
   }
+
+  input, select, textarea {
+    color-scheme: dark;
+  }
 }
 
 /* Custom scrollbar matching dark console aesthetics */

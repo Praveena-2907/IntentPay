@@ -10,6 +10,8 @@ export default {
       colors: {
         console: {
           bg: '#0B0F14',
+          dark: '#080C10',
+          card: '#111820',
           surface: '#111820',
           'surface-2': '#161F29',
           border: '#1F2A37',
