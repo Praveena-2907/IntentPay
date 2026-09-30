@@ -96,6 +96,13 @@ async def generic_exception_handler(request: Request, exc: Exception):
 
 from app.api import users, dev, intents, policies, payments, conflicts, suggestions, dashboard, analytics, simulator
 
+from fastapi.responses import JSONResponse, RedirectResponse
+
+# Root redirect to Swagger docs
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/docs")
+
 # Base health route
 @app.get("/api/health")
 def health():
